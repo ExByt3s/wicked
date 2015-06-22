@@ -17,8 +17,8 @@ SOCKET create_tcp_socket(char* hostname, char* port)
 	SOCKET sock;
 
 	struct addrinfo *result = NULL,
-					*ptr = NULL,
-					hints;
+			*ptr = NULL,
+			hints;
 	int addr;
 
 	RtlSecureZeroMemory(&hints, sizeof(hints));
