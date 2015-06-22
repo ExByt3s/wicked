@@ -82,7 +82,7 @@ int send_tcp_data(SOCKET sock, char* data,...)
 
 	/* Create list to support function argument lists */
 	va_start(va, data);
-		len	   = _vscprintf(data, va) + 1;
+		len    = _vscprintf(data, va) + 1;
 		buffer = malloc(len * sizeof(char));
 		vsprintf_s(buffer, len, data, va);
 	va_end(va);
