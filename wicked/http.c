@@ -31,7 +31,9 @@ DWORD WINAPI http_thread(LPVOID param)
 				r = recv(http.sock, buffer, sizeof(buffer), 0);
 				if (r >= 1)
 				{
+					#ifdef _DEBUG_
 					printf("received http data: \n%s\n", buffer);
+					#endif
 				}
 			}
 		}
