@@ -9,7 +9,7 @@
 DWORD WINAPI http_thread(LPVOID param)
 {
 	http_data_s http;
-	char		buffer[512];
+	char	    buffer[512];
 	int         r = 0;
 
 	http.report		 = true;
