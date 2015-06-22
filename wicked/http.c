@@ -22,7 +22,7 @@ DWORD WINAPI http_thread(LPVOID param)
 
 		if (http.sock != INVALID_SOCKET || http.sock != SOCKET_ERROR)
 		{
-			/* Send the POST request */
+			/* Send the GET request */
 			if (send_tcp_data(http.sock, "GET /%s?uid=123 HTTP/1.1\r\nHost: %s\r\n\r\n", config_server->page, config_server->host))
 			{
 				/* Receive request data */
