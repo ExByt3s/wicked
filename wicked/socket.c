@@ -79,8 +79,8 @@ SOCKET create_tcp_socket(char* hostname, char* port)
 int send_tcp_data(SOCKET sock, char* data,...)
 {
 	va_list va;
-	int len;
-	char* buffer;
+	int     len;
+	char*   buffer;
 
 	/* Create list to support function argument lists */
 	va_start(va, data);
