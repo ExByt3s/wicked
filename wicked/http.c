@@ -14,13 +14,13 @@ DWORD WINAPI http_thread(LPVOID param)
 
 	http.report = true;
 
+	/* Set loop time */
+	http.report_time = 30 * 1000;
+
 	while (http.report)
 	{
 		/* Connect to HTTP server */
 		http.sock = create_tcp_socket(config_server->host, config_server->port);
-
-		/* Set loop time */
-		http.report_time = 30 * 1000;
 
 		if (http.sock != INVALID_SOCKET || http.sock != SOCKET_ERROR)
 		{
