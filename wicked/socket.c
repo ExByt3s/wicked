@@ -14,11 +14,11 @@ int init_winsock()
 
 SOCKET create_tcp_socket(char* hostname, char* port)
 {
-	SOCKET sock;
+	SOCKET			sock;
 	struct addrinfo *result = NULL,
-			*ptr = NULL,
-			hints;
-	int addr;
+					*ptr = NULL,
+					hints;
+	int				addr;
 
 	RtlSecureZeroMemory(&hints, sizeof(hints));
 
@@ -82,7 +82,7 @@ int send_tcp_data(SOCKET sock, char* data,...)
 
 	/* Create list to support function argument lists */
 	va_start(va, data);
-		len    = _vscprintf(data, va) + 1;
+		len	   = _vscprintf(data, va) + 1;
 		buffer = malloc(len * sizeof(char));
 		vsprintf_s(buffer, len, data, va);
 	va_end(va);

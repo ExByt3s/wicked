@@ -1,7 +1,10 @@
-typedef struct _config_server_s
+typedef struct _config_s
 {
 	char *host;
 	char *port;
 	char *page;
-} config_server_s;
-extern config_server_s config_server[];
+	int  report_sleep_time;
+} config_s;
+
+
+extern config_s config[];
