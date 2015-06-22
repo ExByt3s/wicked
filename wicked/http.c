@@ -12,9 +12,7 @@ DWORD WINAPI http_thread(LPVOID param)
 	char        buffer[512];
 	int         r = 0;
 
-	http.report = true;
-
-	/* Set loop time */
+	http.report 	 = true;
 	http.report_time = 30 * 1000;
 
 	while (http.report)
