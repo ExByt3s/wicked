@@ -14,11 +14,11 @@ int init_winsock()
 
 SOCKET create_tcp_socket(char* hostname, char* port)
 {
-	SOCKET			sock;
+	SOCKET		sock;
 	struct addrinfo *result = NULL,
-					*ptr = NULL,
-					hints;
-	int				addr;
+		        *ptr = NULL,
+			hints;
+	int		addr;
 
 	RtlSecureZeroMemory(&hints, sizeof(hints));
 
