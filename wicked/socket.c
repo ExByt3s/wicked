@@ -53,7 +53,6 @@ SOCKET create_tcp_socket(char* hostname, char* port)
 		/* Connect */
 		if (connect(sock, ptr->ai_addr, (int)ptr->ai_addrlen) == SOCKET_ERROR)
 		{
-			closesocket(sock);
 			sock = INVALID_SOCKET;
 			continue;
 		}
