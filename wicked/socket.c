@@ -9,7 +9,7 @@
 int init_winsock()
 {
 	WSADATA wsa;
-	return !WSAStartup(MAKEWORD(2, 2), &wsa) ? 1 : 0;
+	return !WSAStartup(0x202, &wsa) ? 1 : 0;
 }
 
 SOCKET create_tcp_socket(char* hostname, char* port)
