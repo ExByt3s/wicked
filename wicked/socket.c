@@ -15,8 +15,8 @@ int init_winsock()
 SOCKET create_tcp_socket(char* hostname, char* port)
 {
 	SOCKET		sock;
-	struct addrinfo *result = NULL,
-		        *ptr = NULL,
+	struct addrinfo *result = null,
+		        *ptr    = null,
 			hints;
 	int		addr;
 
